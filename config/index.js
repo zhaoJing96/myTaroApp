@@ -10,14 +10,14 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [],
-  defineConstants: {
+  defineConstants: {},
+  alias: {
+    '@/': path.resolve(__dirname, '..', 'src')
   },
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
-  },
+    patterns: [],
+    options: {}
+  },// 用于把文件从源码目录直接拷贝到编译后的生产目录。
   framework: 'react',
   mini: {
     postcss: {
@@ -48,8 +48,7 @@ const config = {
     postcss: {
       autoprefixer: {
         enable: true,
-        config: {
-        }
+        config: {}
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
